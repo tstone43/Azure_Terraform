@@ -16,3 +16,11 @@
     **az keyvault secret list --vault-name "[KeyVault Name]"**
 3.  Now I need to assign a Key Vault Access Policy to the Service Principal I created and this can be done with the following command:
     **az keyvault set-policy --name "[KeyVault Name]" --spn [Client ID for Service Principal] --secret-permissions get**
+    
+## Importing Existing Resource Group and Key Vault into Terraform State
+1.  Add the configuration for your existing Resource Group and existing Key Vault to your main.tf file.
+2.  Terraform syntax for importing existing resource in Azure is like this terraform import **[Terraform Resource Name].[Resource Label] [Azure Resource ID]**
+3.  Run **Terraform Init** to intialize the Azure Provider
+4.  Use the Azure CLI to identify the existing Resource ID for your existing Resource Group where your existing Key Vault resides: 
+    **az group show --name [existing resource group name]**
+5.  
