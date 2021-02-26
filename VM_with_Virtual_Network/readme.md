@@ -22,5 +22,10 @@
 2.  Terraform syntax for importing existing resource in Azure is like this terraform import **[Terraform Resource Name].[Resource Label] [Azure Resource ID]**
 3.  Run **Terraform Init** to intialize the Azure Provider
 4.  Use the Azure CLI to identify the existing Resource ID for your existing Resource Group where your existing Key Vault resides: 
-    **az group show --name [existing resource group name]**
-5.  
+    **az group show --name [existing Resource Group name]**
+5.  Import your existing Resource Group with syntax like this:
+    **terraform import azurerm_resource_group.rg1 [entire value for id from previous command]**
+6.  Use the Azure CLI to identify the existing Resource ID for your existing Key Vault:
+    **az keyvault show --name [existing Key Vault name]**
+7.  Importing your existing Key Vault with syntax like this:
+    **terraform import azurerm_key_vault.kv [entire value for id from previous command]**
