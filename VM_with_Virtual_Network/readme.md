@@ -38,3 +38,6 @@
 ## Verify that your VM is Using the Correct User Name and Password from the Key Vault
 1.  Determine the public IP address by going to your newly created VM in the Azure portal
 2.  Use Remote Desktop to connect to the VM to see if the credentials from your Key Vault will allow to authenticate to VM
+
+## Important Note Regarding Terraform Destroy
+1.  Don't run **terraform destroy** unless you want to delete your existing Key Vault.  If you want to redeploy VM you can just delete the Resource Group and objects within it
