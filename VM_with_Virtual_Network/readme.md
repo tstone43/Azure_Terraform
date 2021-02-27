@@ -35,6 +35,6 @@
 2.  Review output of previous command to make sure necessary resources are being created
 3.  Next run **terraform apply** and input yes to create the resources
 
-## Verify that your VM is Using the Correct User name and Password from the Key Vault
+## Verify that your VM is Using the Correct User Name and Password from the Key Vault
 1.  Determine the public IP address by going to your newly created VM in the Azure portal
 2.  Use Remote Desktop to connect to the VM to see if the credentials from your Key Vault will allow to authenticate to VM
