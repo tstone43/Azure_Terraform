@@ -29,3 +29,12 @@
     **az keyvault show --name [existing Key Vault name]**
 7.  Importing your existing Key Vault with syntax like this:
     **terraform import azurerm_key_vault.kv [entire value for id from previous command]**
+    
+## Deploy the VM and VNET Using Terraform
+1.  In the VM_with_Virtual_Network directory first run **terraform plan**
+2.  Review output of previous command to make sure necessary resources are being created
+3.  Next run **terraform apply** and input yes to create the resources
+
+## Verify that your VM is Using the Correct User name and Password from the Key Vault
+1.  Determine the public IP address by going to your newly created VM in the Azure portal
+2.  Use Remote Desktop to connect to the VM to see if the credentials from your Key Vault will allow to authenticate to VM
