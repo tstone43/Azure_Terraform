@@ -1,5 +1,5 @@
 # Steps for Creating an Azure Windows VM that Leverages Existing Key Vault
-## Create a service principal for Terraform in Azure CLI
+## Create a Service Principal for Terraform in Azure CLI
 1.  **az login**
 2.  **az account list**
 3.  **az account set --subscription="SUBSCRIPTION_ID"**
