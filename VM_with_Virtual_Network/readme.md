@@ -41,3 +41,16 @@
 
 ## Important Note Regarding Terraform Destroy
 Don't run **terraform destroy** unless you want to delete your existing Key Vault.  If you want to redeploy VM you can just delete the Resource Group and objects within it
+
+## Retrieving Secrets from Existing Key Vault Without Importing it into Terraform State
+1.  It is not necessary to import an existing resource group and an existing Key Vault in order to use the secrets from the existing Key Vault.
+2.  You can use the following syntax to reference an existing Key Vault that you have setup in Azure:
+    **data "azurerm_key_vault" "kvdata" {
+         name = var.existing-kv-name
+         resource_group_name = var.existing-rg
+    }**
+3.  You can then use the following syntax to refer to an existing secret in Key Vault:
+    **data "azurerm_key_vault_secret" "kvsecret" {
+         name = "WinVMPassword"
+         key_vault_id = data.azurerm_key_vault.kvdata.id
+    }**
