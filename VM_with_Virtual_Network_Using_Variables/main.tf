@@ -117,24 +117,6 @@ resource "azurerm_windows_virtual_machine" "winvm" {
     }
 }
 
-# Existing Resource Group where existing Key Vault resides
-#resource "azurerm_resource_group" "rg1" {
-    #name = var.existing-rg
-    #location = var.existing-rg-location
-#}
-
-# Initialized to grab tenant ID for Key Vault
-data "azurerm_client_config" "current" {}
-
-# Existing Key Vault
-#resource "azurerm_key_vault" "kv" {
-    #name = var.existing-kv-name
-    #location = var.existing-rg-location
-    #resource_group_name = var.existing-rg
-    #tenant_id = data.azurerm_client_config.current.tenant_id
-    #sku_name = "standard"
-#}
-
 # Initialized so in following steps Key Vault secrets can be referenced
 data "azurerm_key_vault" "kvdata" {
     name = var.existing-kv-name
