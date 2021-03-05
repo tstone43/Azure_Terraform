@@ -10,3 +10,7 @@
 
 ## VM_with_Virtual_Network_Using_Variables
 - This shows how to define input variables in the variables.tf file and then how to pass values for the input variables using terraform.tfvars file
+
+## VM_with_Virtual_Network_Using_Modules
+- This shows how to create the Windows server in a Terraform module
+
