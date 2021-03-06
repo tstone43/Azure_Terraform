@@ -68,3 +68,8 @@ variable "nsg_rule" {
         destination_address_prefix = string
     }))
 }
+
+variable "nsg_name" {
+    description = "Name of the Network Security Group"
+    type = string
+}

@@ -36,7 +36,7 @@ program = ["bash", "-c", "curl -s 'https://api.ipify.org?format=json'"]
 }
 
 resource "azurerm_network_security_group" "nsg" {
-    name = "Allow_HTTP_and_RDP"
+    name = var.nsg_name
     location = var.location
     resource_group_name = var.resource_group_name
 

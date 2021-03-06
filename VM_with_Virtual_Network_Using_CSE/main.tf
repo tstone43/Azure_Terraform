@@ -49,6 +49,7 @@ module "server" {
     existing-kv-name = var.existing-kv-name
     existing-rg = var.existing-rg
     nsg_rule = var.nsg_rule
+    nsg_name = var.nsg_name
     os = {
     publisher = var.os.publisher
     offer = var.os.offer

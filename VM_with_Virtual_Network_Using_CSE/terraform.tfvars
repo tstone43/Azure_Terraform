@@ -31,3 +31,5 @@ nsg_rule =[
     destination_address_prefix = "*"
     }
 ]
+
+nsg_name = "Allow_HTTP_and_RDP"
